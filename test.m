@@ -1,0 +1,12 @@
+clear;
+close all;
+Nrgb = imread('easy\5.jpg');
+imshow(Nrgb);
+BW = preprocess(Nrgb);
+BW_filled = myfill(BW);
+BW_filled(1,:) = 0;
+BW_filled(:,1) = 0;
+BW_filled(end,:) = 0;
+BW_filled(:,end) = 0;
+imshow(BW_filled);
+boundaries = mybwbound2(BW_filled);
