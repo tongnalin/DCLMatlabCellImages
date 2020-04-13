@@ -3,6 +3,7 @@ function [ th ] = otsuthresh( grayimg, L )
     [M, N] = size(grayimg);
     %hist = imhist(grayimg);
     count = 0;
+    hist = zeros(M,N);
     for a = 1:M
         for b = 1:N
          if grayimg(a,b) ~=0
